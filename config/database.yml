@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  database: curses-app
+  username: caiden
+  password: caiden
+  host: localhost
+
+drop_environment:
+  adapter: postgresql
+  database: template1
+  username: caiden
+  password: caiden
+  host: localhost
