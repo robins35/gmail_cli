@@ -3,7 +3,7 @@ class Sidebar < Window
     super
     Ncurses.attron Ncurses.COLOR_PAIR(1)
     c = ' '.ord
-    b = '|'.ord
+    b = Ncurses::ACS_CKBOARD
     @window.border(c, b, c, c, c, b, c, b)
     @window.wbkgd(Ncurses.COLOR_PAIR(1))
     refresh
