@@ -7,10 +7,8 @@ require 'awesome_print'
 require 'pry'
 require 'yaml'
 require 'rake'
-#require 'ncurses'
-#require 'socket'
-#require 'therubyracer'
-#require 'uri'
+require 'gmail'
+require 'highline/import'
 
 app = Rake.application
 app.init

@@ -19,12 +19,22 @@ GEM
     builder (3.2.2)
     byebug (8.2.1)
     coderay (1.1.0)
+    gmail (0.6.0)
+      gmail_xoauth (>= 0.3.0)
+      mail (>= 2.2.1)
+    gmail_xoauth (0.4.1)
+      oauth (>= 0.3.6)
+    highline (1.7.8)
     i18n (0.7.0)
     interception (0.5)
     json (1.8.3)
+    mail (2.6.3)
+      mime-types (>= 1.16, < 3)
     method_source (0.8.2)
+    mime-types (2.99)
     minitest (5.8.3)
     ncurses-ruby (1.2.4)
+    oauth (0.4.7)
     pg (0.18.4)
     pry (0.10.3)
       coderay (~> 1.1.0)
@@ -48,6 +58,8 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   awesome_print
+  gmail
+  highline
   ncurses-ruby
   pg
   pry

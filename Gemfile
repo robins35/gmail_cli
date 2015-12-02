@@ -12,6 +12,9 @@ gem 'awesome_print'
 
 gem 'ncurses-ruby'
 
+gem 'gmail'
+gem 'highline'
+
 gem 'rake'
 
 gem 'pg'
