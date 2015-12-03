@@ -9,6 +9,8 @@ require 'yaml'
 require 'rake'
 require 'gmail'
 require 'highline/import'
+require 'uri'
+require 'net/http'
 
 app = Rake.application
 app.init
