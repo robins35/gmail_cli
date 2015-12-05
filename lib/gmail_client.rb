@@ -14,17 +14,20 @@ class GmailClient
     gmail_credentials = YAML.load_file('config/gmail.yml')
     client_id = gmail_credentials["client_id"]
     client_secret = gmail_credentials["client_secret"]
+    redirect_url = 'https://oauth2-login-demo.appspot.com/code'
 
-    puts "Go to the following url to enable the gmail cli app:"
-    puts "https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=#{client_id}"
-    print "Paste your authorization code here: "
-    authorization_code = gets.chomp
+    #puts "Go to the following url to enable the gmail cli app:"
+    #puts "https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=#{client_id}"
+    #print "Paste your authorization code here: "
+    #authorization_code = gets.chomp
     #authorization_code = "4/yYZjdOeprKRIH3VwDfHs0-NsEvcstmvboM_c4Why0uk"
+    authorization_code = "4/Y26-ui3QejJepoenPqXRu5oSduVTRRVd4wlG595r1yg"
 
-    uri = URI.parse("https://www.googleapis.com/oauth2/v3/token")
+
+    uri = URI.parse("https://www.googleapis.com/oauth2/v4/token")
     request = Net::HTTP::Post.new(uri.request_uri)
     request.add_field('Content-Type', 'application/x-www-form-urlencoded')
-    request.set_form_data('code' => authorization_code, 'client_id' => client_id, 'client_secret' => client_secret, 'redirect_url' => "urn:ietf:wg:oauth:2.0:oob", 'grant_type' => "authorization_code")
+    request.set_form_data('code' => authorization_code, 'client_id' => client_id, 'client_secret' => client_secret, 'redirect_url' => redirect_url, 'grant_type' => "authorization_code")
 
     http = Net::HTTP.new(uri.host, uri.port)
     http.set_debug_output($stdout)
