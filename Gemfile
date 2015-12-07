@@ -13,6 +13,8 @@ gem 'awesome_print'
 gem 'ncurses-ruby'
 
 gem 'gmail'
+gem 'signet'
+gem 'launchy'
 gem 'highline'
 
 gem 'rake'
