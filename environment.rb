@@ -1,18 +1,17 @@
 require 'active_record'
-#require 'active_support'
-#require 'active_support/all'
-#require 'action_view'
-#require 'action_view/helpers'
 require 'awesome_print'
 require 'pry'
 require 'yaml'
 require 'rake'
-require 'gmail'
-require 'signet/oauth_2/client'
 require 'launchy'
 require 'highline/import'
 require 'uri'
 require 'net/http'
+require 'google/apis/gmail_v1'
+require 'google/api_client/client_secrets'
+require 'google/api_client/auth/installed_app'
+require 'google/api_client/auth/storage'
+require 'google/api_client/auth/storages/file_store'
 
 app = Rake.application
 app.init
